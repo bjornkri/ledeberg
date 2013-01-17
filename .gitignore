@@ -1,3 +1,4 @@
+.DS_Store
 *.pyc
 static_root
 dev.db
