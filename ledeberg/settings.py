@@ -158,6 +158,7 @@ INSTALLED_APPS = (
     'cms.plugins.link',
     'cms.plugins.picture',
     'cms.plugins.text',
+    'django_extensions'
 )
 
 # A sample logging configuration. The only tangible logging
