@@ -1,4 +1,6 @@
+.DS_Store
 *.pyc
 static_root
 dev.db
 local_settings.py
+ledeberg/media

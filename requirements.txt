@@ -2,3 +2,4 @@ django
 django-cms
 South
 PIL
+django-extensions
