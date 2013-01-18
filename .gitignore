@@ -3,3 +3,4 @@
 static_root
 dev.db
 local_settings.py
+ledeberg/media

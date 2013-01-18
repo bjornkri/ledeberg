@@ -158,6 +158,7 @@ INSTALLED_APPS = (
     'cms.plugins.link',
     'cms.plugins.picture',
     'cms.plugins.text',
+    'cms.plugins.file',
     'django_extensions'
 )
 
