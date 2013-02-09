@@ -19,20 +19,30 @@ a:hover {
 }
 
 .jumbotron {
-    background-image: url('../img/header2.png');
+    background-image: url('../img/header3.png');
     background-repeat: no-repeat;
     background-position: center center;
     text-align: center;
+    color: #fff;
+    color: rgba(255, 255, 255, .6);
+    font-size: 10px;
+}
+.jumbotron a {
+    color: #fff;
+    color: rgba(255, 255, 255, .6);
+}
+.jumbotron a:hover {
+    color: #fff;
 }
 .jumbotron h1 {
+    margin-right: -9999px;
     margin-top: 0px;
     margin-bottom: 0px;
-    background: rgba(51, 73, 111, .7);
+    /* background: rgba(51, 73, 111, .7); */
     line-height: 1;
     text-transform: uppercase;
-    padding-top: 60px;
-    padding-bottom: 50px;
-    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 70px;
 }
 .jumbotron h1 .ledeberg {
     font-size: 100px;
