@@ -11,5 +11,10 @@ class Petition(models.Model):
     emailadres = models.EmailField(blank=True, null=True)
 
     def __unicode__(self):
-        return "%s %s, %s, %s" % (self.voornaam, self.naam, self.straat,
+        name = ""
+        if self.voornaam and self.familienaam:
+            name = "%s %s" % (self.voornaam, self.familienaam)
+        if self.organisatie:
+            name += self.organisatie
+        return "%s, %s, %s" % (name, self.straat,
             self.gemeente)
