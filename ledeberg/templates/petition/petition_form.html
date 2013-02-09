@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="intro span8 offset2">
+          <h1>Petitie</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span8 offset2">
+          <p>Met de sluiting van Standaert Doe-het-zelf verliest Ledeberg een familiezaak met een lange geschiedenis. Jammer, maar tegelijk is dit ook een kans voor de wijk.</p>
+          <p>Het bewonersinitiatief <strong>Ledeberg Doet het Zelf</strong> wil dat de Standaert-site ten dienste van de Ledebergenaren blijft en organiseert daroom deze petitie. Als ondertekenaar van deze petitite wil ik dat de naam <strong>Standaert</strong> aan de site verbonden blijft en dat het een ontmoetingsplek blijft voor alle Ledebergenaren.</p>
+          <p>Concreet wil ik minstens:
+            <ul>
+              <li>Dat op de Standaert-site een groene en verkeersvrije buidenruimte komt.</li>
+              <li>Dat er op de Standaert-site ruimte komt voor Ledebergse organisaties.</li>
+              <li>Dat Ledebergenaren mee kunnen beslissen over wat de Standaert-site uiteindelijk wordt en dat Ledebergenaren ook in de toekomst de plek mee beheren.</li>
+            </ul>
+          </p>
+          <form action="." method="post">
+            <p>Velden met * zijn verplicht</p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p><button class='btn'>Sturen</button></p>
+          </form>
+        </div>
+    </div>
+{% endblock %}
