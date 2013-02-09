@@ -2,10 +2,10 @@ from django.db import models
 
 
 class Petition(models.Model):
-    naam = models.CharField(max_length=255)
-    voornaam = models.CharField(max_length=255)
+    familienaam = models.CharField(max_length=255, blank=True, null=True)
+    voornaam = models.CharField(max_length=255, blank=True, null=True)
+    organisatie = models.CharField(max_length=255, blank=True, null=True)
     straat = models.CharField(max_length=255)
-    huisnummer = models.CharField(max_length=255)
     postcode = models.CharField(max_length=255)
     gemeente = models.CharField(max_length=255)
     emailadres = models.EmailField(blank=True, null=True)

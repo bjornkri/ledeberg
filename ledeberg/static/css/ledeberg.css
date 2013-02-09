@@ -3,6 +3,7 @@ body {
 }
 
 h1, h2, h3 {
+    text-align: left;
     font-family: 'Merriweather', Georgia, Times, serif;
 }
 h4, h5, h6, p, div {
@@ -35,7 +36,7 @@ a:hover {
     color: #fff;
 }
 .jumbotron h1 {
-    margin-right: -9999px;
+    text-indent: -9999px;
     margin-top: 0px;
     margin-bottom: 0px;
     /* background: rgba(51, 73, 111, .7); */
@@ -80,6 +81,7 @@ p + h4 {
     line-height: 1.5em;
 }
 .intro h1 {
+    text-align: center;
     font-weight: normal;
     padding-bottom: 30px;
 }
@@ -96,4 +98,21 @@ p + h4 {
 
 .required label:after {
     content: " *";
+}
+
+.required label {
+    font-weight: bold;
+}
+
+.errorlist {
+    color: #ff0000;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+fieldset.name {
+    border: 1px solid #ccc;
+    background: #eee;
 }

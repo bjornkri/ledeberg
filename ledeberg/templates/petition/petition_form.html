@@ -3,26 +3,79 @@
 {% block content %}
     <div class="row">
         <div class="intro span8 offset2">
-          <h1>Petitie</h1>
+          <h1>Ledeberg Doet het Zelf</h1>
+          <p>Met de sluiting van Standaert Doe-het-zelf verliest
+          Ledeberg een familiezaak met een lange geschiedenis,
+          maar tegelijk is dit ook een kans voor de wijk.</p>
+          <hr />
         </div>
     </div>
     <div class="row">
-        <div class="span8 offset2">
-          <p>Met de sluiting van Standaert Doe-het-zelf verliest Ledeberg een familiezaak met een lange geschiedenis. Jammer, maar tegelijk is dit ook een kans voor de wijk.</p>
-          <p>Het bewonersinitiatief <strong>Ledeberg Doet het Zelf</strong> wil dat de Standaert-site ten dienste van de Ledebergenaren blijft en organiseert daroom deze petitie. Als ondertekenaar van deze petitite wil ik dat de naam <strong>Standaert</strong> aan de site verbonden blijft en dat het een ontmoetingsplek blijft voor alle Ledebergenaren.</p>
-          <p>Concreet wil ik minstens:
-            <ul>
-              <li>Dat op de Standaert-site een groene en verkeersvrije buidenruimte komt.</li>
-              <li>Dat er op de Standaert-site ruimte komt voor Ledebergse organisaties.</li>
-              <li>Dat Ledebergenaren mee kunnen beslissen over wat de Standaert-site uiteindelijk wordt en dat Ledebergenaren ook in de toekomst de plek mee beheren.</li>
-            </ul>
-          </p>
+        <div class="span4 offset1">
+          <p>Het bewonersinitiatief <em>Ledeberg Doet het Zelf</em> wil dat de
+Standaert-site ten dienste van de Ledebergenaren blijft.
+Een plaats waar ze elkaar kunnen ontmoeten.</p>
+          <h3>Concreet:</h3>
+          <ul>
+            <li>Een open, groene en verkeersvrije buitenruimte.</li>
+            <li>Ruimte voor Ledebergse organisaties.</li>
+            <li>Mee kunnen beslissen over wat de Standaert-site uiteindelijk wordt en ze samen kunnen beheren.</li>
+          </ul>
+            <div class="fb-like-box" data-href="https://www.facebook.com/LedebergDoetHetZelf" data-width="292" data-show-faces="true" data-stream="true" data-header="false"></div>
+        </div>
+        <div class="span5 offset1">
+          <h2>Ik ondersteun dit initiatief!</h2>
           <form action="." method="post">
+            {{ form.non_field_errors }}
             <p>Velden met * zijn verplicht</p>
             {% csrf_token %}
-            {{ form.as_p }}
+            <fieldset class="name">
+              <p class="required">
+                {{ form.voornaam.errors }}
+                <label for="id_voornaam">{{ form.voornaam.label }}:</label> {{ form.voornaam }}
+              </p>
+              <p class="required">
+                {{ form.familienaam.errors }}
+                <label for="id_familienaam">{{ form.familienaam.label }}:</label> {{ form.familienaam }}
+              </p>
+              <p><em>of</em></p>
+              <p class="required">
+                {{ form.organisatie.errors }}
+                <label for="id_organisatie">Organisatie/vereniging:</label> {{ form.organisatie }}
+              </p>
+            </fieldset>
+            <fieldset>
+            <p class="required">
+              {{ form.straat.errors }}
+              <label for="id_straat">Straat + nr:</label> {{ form.straat }}
+            </p>
+            <p class="required">
+              {{ form.postcode.errors }}
+              <label for="id_postcode">{{ form.postcode.label }}:</label> {{ form.postcode }}
+            </p>
+            <p class="required">
+              {{ form.gemeente.errors }}
+              <label for="id_gemeente">{{ form.gemeente.label }}:</label> {{ form.gemeente }}
+            </p>
+            <p>Ik wil op de hoogte gehouden worden:</p>
+            <p>
+              <label for="id_emailadres">e-mailadres:</label> {{ form.emailadres }}
+            </p>
             <p><button class='btn'>Sturen</button></p>
+          </fieldset>
           </form>
         </div>
     </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=300494076656783";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+{% endblock %}
+
+{% block mailchimp %}
 {% endblock %}

@@ -160,6 +160,7 @@ INSTALLED_APPS = (
     'cms.plugins.text',
     'cms.plugins.file',
     'django_extensions',
+    'form_utils',
     'petition'
 )
 
