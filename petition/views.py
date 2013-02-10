@@ -6,4 +6,4 @@ from petition.forms import PetitionForm
 class PetitionView(CreateView):
     form_class = PetitionForm
     model = Petition
-    success_url = '/petitie/succes/'
+    success_url = '/succes/'

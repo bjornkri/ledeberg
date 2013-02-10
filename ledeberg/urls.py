@@ -6,8 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    url(r'^petitie/', include('petition.urls')),
-    url(r'^', include('cms.urls')),
+    url(r'^', include('petition.urls')),
 )
 
 if settings.DEBUG:
