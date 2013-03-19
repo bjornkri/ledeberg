@@ -3,3 +3,4 @@ django-cms
 South
 PIL
 django-extensions
+python-memcached
