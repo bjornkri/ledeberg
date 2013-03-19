@@ -35,4 +35,4 @@ def deploy():
         run('git pull')
         virtualenv('pip-2.7 install -r requirements.txt')
         virtualenv('python2.7 manage.py collectstatic --noinput')
-        run('../apache2/bin/restart')
+        virtualenv('../apache2/bin/restart')
