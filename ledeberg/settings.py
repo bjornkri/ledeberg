@@ -133,9 +133,17 @@ TEMPLATE_DIRS = (
 )
 
 CMS_TEMPLATES = (
-    ('template1.html', 'Template One'),
-    ('template2.html', 'Template Two'),
+    ('template1.html', 'Template With Facebook'),
+    ('template2.html', 'Template with boxes'),
+    ('template3.html', 'Template without Facebook')
 )
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+    }
+}
 
 LANGUAGES = [
     ('en', 'English'),
