@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags menu_tags %}
 <html>
     <head>
         {% render_block "css" %}
@@ -17,6 +17,11 @@
             foto: <a href="http://pressphoto.com">pressphoto.com</a>
         </div>
         <div class="container">
+            <div class="row">
+                <div class="menu span12">
+                    <ul>{% show_menu %}</ul>
+                </div>
+            </div>
             {% block content %}
 
             {% endblock %}
