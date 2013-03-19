@@ -1,3 +1,6 @@
+/* @override 
+	http://ledebergdoethetzelf.be/static//css/ledeberg.css */
+
 body {
     background-image: url('/static/img/retina_wood.png');
 }
@@ -59,18 +62,20 @@ a:hover {
 
 .container {
     background: #fff;
-    padding-top: 40px;
+
     text-align: justify;
 }
 
 .menu {
     background: #669;
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, .4);
+    margin-bottom: 40px;
 }
 
 
 .menu ul {
     list-style: none;
-    margin: 0px;:
+    margin: 0px;
 }
 
 .menu ul li {
@@ -78,11 +83,14 @@ a:hover {
 }
 
 .menu ul li a {
-    padding: 10px 20px;
+	display: block;
+    padding: 10px 30px;
+    color: #fff;
 }
 
-.menu ul li.selected {
-    background: #aad;
+.menu ul li.selected a {
+    background: #fff;
+    color: #669;
 }
 
 h4 {
