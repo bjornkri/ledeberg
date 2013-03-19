@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags %}
+
+{% block content %}
+    {% show_menu %}
+    <div class="row">
+        <div class="intro span8 offset2">
+            {% placeholder template_1_intro %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="span8 offset2">
+            {% placeholder template_1_content %}
+        </div>
+    </div>
+{% endblock %}
