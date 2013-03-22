@@ -1,0 +1,5 @@
+{% load thumbnail %}
+
+<a href="{% if link %}{{ link }}{% else %}{{ picture.image.url }}{% endif %}">
+    <img src="{% thumbnail picture.image 300x600 %}"{% if picture.alt %} alt="{{ picture.alt }}"{% endif %} />
+</a>

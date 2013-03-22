@@ -135,7 +135,8 @@ TEMPLATE_DIRS = (
 CMS_TEMPLATES = (
     ('template1.html', 'Template With Facebook'),
     ('template2.html', 'Template with boxes'),
-    ('template3.html', 'Template without Facebook')
+    ('template3.html', 'Template without Facebook'),
+    ('template4.html', 'Media template')
 )
 
 CACHES = {
@@ -163,6 +164,7 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'sekizai',
+    'easy_thumbnails',
     'cms.plugins.link',
     'cms.plugins.picture',
     'cms.plugins.text',
